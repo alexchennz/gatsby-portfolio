@@ -38,5 +38,65 @@
     "detailUrl": "/projects/task-management-app",
     "demoUrl": "#",
     "repoUrl": "https://github.com/alexchennz/task-management-app"
+  },
+  {
+    "id": "3",
+    "title": "AI-Powered Content Generator",
+    "slug": "ai-content-generator",
+    "description": "An intelligent content creation tool that leverages AI to generate high-quality articles, blog posts, and marketing copy.",
+    "longDescription": "This AI-powered content generator helps content creators, marketers, and businesses produce high-quality written content efficiently. Using advanced natural language processing models, it can generate articles, blog posts, product descriptions, and marketing copy that matches specific tones, styles, and brand guidelines.",
+    "image": "/images/projects/project-3.jpg",
+    "techStack": ["Python", "TensorFlow", "Flask", "React", "OpenAI API"],
+    "features": [
+      "Content generation in multiple formats and styles",
+      "Customizable tone and brand voice settings",
+      "SEO optimization suggestions",
+      "Plagiarism detection and content uniqueness verification",
+      "Content analytics and performance tracking"
+    ],
+    "challenges": "Balancing AI-generated content with human creativity was a significant challenge. I implemented a hybrid approach where the AI suggests content blocks that users can edit, rearrange, and refine, creating a collaborative workflow between human creativity and AI efficiency.",
+    "detailUrl": "/projects/ai-content-generator",
+    "demoUrl": "#",
+    "repoUrl": "https://github.com/alexchennz/ai-content-generator"
+  },
+  {
+    "id": "4",
+    "title": "Health & Fitness Tracker",
+    "slug": "health-fitness-tracker",
+    "description": "A comprehensive mobile application for tracking fitness activities, nutrition, and health metrics with personalized insights.",
+    "longDescription": "This health and fitness tracker provides users with a complete solution for monitoring their physical activities, nutrition intake, sleep patterns, and overall wellness. The app offers personalized recommendations based on user goals and progress, helping them maintain a healthier lifestyle through data-driven insights.",
+    "image": "/images/projects/project-4.jpg",
+    "techStack": ["React Native", "Firebase", "Redux", "Node.js", "TensorFlow Lite"],
+    "features": [
+      "Activity tracking with GPS for running, cycling, and walking",
+      "Nutrition logging with barcode scanner and food database",
+      "Sleep quality analysis and recommendations",
+      "Custom workout plans and exercise library",
+      "Progress visualization with interactive charts and reports"
+    ],
+    "challenges": "Developing accurate activity recognition algorithms while maintaining battery efficiency was particularly challenging. I implemented a hybrid approach that uses on-device machine learning for common activities and cloud processing for more complex pattern recognition, significantly improving battery life without sacrificing accuracy.",
+    "detailUrl": "/projects/health-fitness-tracker",
+    "demoUrl": "#",
+    "repoUrl": "https://github.com/alexchennz/health-fitness-tracker"
+  },
+  {
+    "id": "5",
+    "title": "Smart Home Automation System",
+    "slug": "smart-home-automation",
+    "description": "An IoT-based home automation platform that enables seamless control of connected devices through voice commands and mobile apps.",
+    "longDescription": "This smart home automation system integrates various IoT devices and services into a unified platform, allowing users to control their home environment through voice commands, mobile apps, or automated routines. The system supports a wide range of devices including lights, thermostats, security cameras, door locks, and entertainment systems.",
+    "image": "/images/projects/project-5.jpg",
+    "techStack": ["IoT", "MQTT", "Node.js", "React", "TensorFlow", "AWS IoT"],
+    "features": [
+      "Voice control integration with major voice assistants",
+      "Automated routines based on time, location, or device states",
+      "Energy usage monitoring and optimization",
+      "Advanced security features with anomaly detection",
+      "Intuitive mobile and web dashboard for device management"
+    ],
+    "challenges": "Creating a system that works reliably across different device manufacturers and protocols was extremely challenging. I developed a modular architecture with standardized adapters for each protocol and device type, allowing for seamless integration of new devices while maintaining backward compatibility with existing ones.",
+    "detailUrl": "/projects/smart-home-automation",
+    "demoUrl": "#",
+    "repoUrl": "https://github.com/alexchennz/smart-home-automation"
   }
 ]

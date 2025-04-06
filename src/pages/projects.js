@@ -1,10 +1,11 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Section from "../components/Section"
 import ProjectCard from "../components/ProjectCard"
 
-// Use hardcoded data for now until GraphQL is working
-const projectsData = [
+// Fallback project data in case GraphQL query fails
+const fallbackProjects = [
   {
     id: "1",
     title: "E-Commerce Platform",
@@ -25,7 +26,10 @@ const projectsData = [
   }
 ]
 
-const ProjectsPage = () => {
+const ProjectsPage = ({ data }) => {
+  // Use GraphQL data if available, otherwise use fallback
+  const projects = data.allProjectsJson ? data.allProjectsJson.nodes : fallbackProjects;
+  
   return (
     <Layout>
       <Section
@@ -33,8 +37,8 @@ const ProjectsPage = () => {
         description="A collection of my work that demonstrates my skills and experience."
         className="pt-24"
       >
-        <div className="grid md:grid-cols-2 gap-8">
-          {projectsData.map(project => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map(project => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
@@ -42,5 +46,21 @@ const ProjectsPage = () => {
     </Layout>
   )
 }
+
+export const query = graphql`
+  query ProjectsQuery {
+    allProjectsJson {
+      nodes {
+        id
+        title
+        description
+        image
+        techStack
+        detailUrl
+        demoUrl
+      }
+    }
+  }
+`
 
 export default ProjectsPage
