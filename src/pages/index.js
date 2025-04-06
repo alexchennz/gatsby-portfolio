@@ -29,7 +29,6 @@ const fallbackProjects = [
 
 
 export default function Home({data}) {
-  console.log(data)
   
   // Use GraphQL data for projects if available, otherwise use fallback
   const projects = data.projects ? data.projects.nodes : fallbackProjects;
@@ -51,7 +50,7 @@ export default function Home({data}) {
         <div className="mt-12 text-center">
           <Link 
             to="/projects" 
-            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md transition-colors inline-block"
+            className="bg-primary hover:bg-primary-light text-white px-6 py-3 rounded-md transition-colors inline-block"
           >
             View All Projects
           </Link>
@@ -60,13 +59,13 @@ export default function Home({data}) {
       
       <Section id="contact">
         <div className="text-center max-w-2xl mx-auto">
-          <h2 className="text-3xl font-bold mb-4">Let's Connect</h2>
-          <p className="text-gray-300 mb-8">
+          <h2 className="text-3xl font-bold mb-4 text-text">Let's Connect</h2>
+          <p className="text-text mb-8">
             Have a question or want to work together? I'd love to hear from you!
           </p>
           <Link 
             to="/contact" 
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md transition-colors inline-block font-medium"
+            className="bg-primary hover:bg-primary-light text-white px-8 py-3 rounded-md transition-colors inline-block font-medium"
           >
             Get in Touch
           </Link>
