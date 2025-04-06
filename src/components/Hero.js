@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 const Hero = ({ data }) => {
   return (
-    <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800 min-h-[90vh] flex items-center">
+    <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800 flex items-center">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12 max-w-5xl mx-auto">
           <div className="md:w-1/2 text-center md:text-left">

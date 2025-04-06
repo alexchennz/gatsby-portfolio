@@ -4,19 +4,9 @@ import Layout from "../components/layout"
 import Hero from "../components/Hero"
 import Section from "../components/Section"
 import ProjectCard from "../components/ProjectCard"
-import BlogCard from "../components/BlogCard"
 
-// Use hardcoded data for now until GraphQL is working
-// const siteData = {
-//   title: "DevPortfolio",
-//   author: "Alex Chen",
-//   role: "Full Stack Developer",
-//   description: "I build exceptional digital experiences with modern web technologies. Passionate about creating innovative solutions that make a difference.",
-//   resumeUrl: "#",
-//   contactUrl: "/contact"
-// }
-
-const projectsData = [
+// Fallback project data in case GraphQL query fails
+const fallbackProjects = [
   {
     id: "1",
     title: "E-Commerce Platform",
@@ -37,29 +27,13 @@ const projectsData = [
   }
 ]
 
-const blogData = [
-  {
-    id: "1",
-    title: "Getting Started with React Hooks",
-    date: "April 6, 2025",
-    category: "React",
-    description: "An in-depth guide to understanding and implementing React Hooks in your applications.",
-    image: "/images/blog/post-1.jpg",
-    url: "/blog/getting-started-with-react-hooks"
-  },
-  {
-    id: "2",
-    title: "Building Scalable APIs with GraphQL",
-    date: "April 3, 2025",
-    category: "GraphQL",
-    description: "Explore the benefits of GraphQL and learn how to build efficient, scalable APIs.",
-    image: "/images/blog/post-2.jpg",
-    url: "/blog/building-scalable-apis-with-graphql"
-  }
-]
 
 export default function Home({data}) {
   console.log(data)
+  
+  // Use GraphQL data for projects if available, otherwise use fallback
+  const projects = data.projects ? data.projects.nodes : fallbackProjects;
+  
   return (
     <Layout>
       <Hero data={data.site.siteMetadata} />
@@ -70,7 +44,7 @@ export default function Home({data}) {
         description="Here are some of my recent works that showcase my skills and experience."
       >
         <div className="grid md:grid-cols-2 gap-8">
-          {projectsData.map(project => (
+          {projects.map(project => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
@@ -80,27 +54,6 @@ export default function Home({data}) {
             className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md transition-colors inline-block"
           >
             View All Projects
-          </Link>
-        </div>
-      </Section>
-      
-      <Section 
-        id="latest-posts"
-        title="Latest Blog Posts"
-        description="Sharing my thoughts and experiences in web development."
-        className="bg-slate-800/50"
-      >
-        <div className="grid md:grid-cols-2 gap-8">
-          {blogData.map(post => (
-            <BlogCard key={post.id} post={post} />
-          ))}
-        </div>
-        <div className="mt-12 text-center">
-          <Link 
-            to="/blog" 
-            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md transition-colors inline-block"
-          >
-            View All Posts
           </Link>
         </div>
       </Section>
@@ -133,6 +86,17 @@ export const query = graphql`
         title
         contactUrl
         resumeUrl
+      }
+    }
+    proects: allProjectsJson {
+      nodes {
+        id
+        title
+        description
+        image
+        techStack
+        detailUrl
+        demoUrl
       }
     }
   }
