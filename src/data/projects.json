@@ -2,19 +2,41 @@
   {
     "id": "1",
     "title": "E-Commerce Platform",
+    "slug": "e-commerce-platform",
     "description": "A full-stack e-commerce solution with modern UI and secure payment processing.",
+    "longDescription": "This e-commerce platform provides a complete solution for online retailers, featuring a responsive design, secure payment processing, and comprehensive inventory management. Built with scalability in mind, it can handle everything from small boutiques to large-scale retail operations.",
     "image": "/images/projects/project-1.jpg",
-    "techStack": ["React", "Node.js", "MongoDB"],
+    "techStack": ["React", "Node.js", "MongoDB", "Express", "Stripe API"],
+    "features": [
+      "Responsive design optimized for all devices",
+      "Secure payment processing with Stripe integration",
+      "Real-time inventory management",
+      "User authentication and profile management",
+      "Admin dashboard with sales analytics"
+    ],
+    "challenges": "One of the main challenges was implementing a real-time inventory system that could handle concurrent transactions without conflicts. I solved this by implementing optimistic UI updates with server validation and a queue system for processing orders.",
     "detailUrl": "/projects/e-commerce-platform",
-    "demoUrl": "#"
+    "demoUrl": "#",
+    "repoUrl": "https://github.com/alexchennz/e-commerce-platform"
   },
   {
     "id": "2",
     "title": "Task Management App",
+    "slug": "task-management-app",
     "description": "Collaborative task management with real-time updates and team features.",
+    "longDescription": "This task management application helps teams organize their work efficiently with features like real-time updates, task assignments, deadline tracking, and progress visualization. It's designed to improve productivity and collaboration within teams of any size.",
     "image": "/images/projects/project-2.jpg",
-    "techStack": ["Vue.js", "Firebase", "Vuex"],
+    "techStack": ["Vue.js", "Firebase", "Vuex", "Tailwind CSS", "Chart.js"],
+    "features": [
+      "Real-time task updates across all team members",
+      "Drag-and-drop task organization",
+      "Task assignment and deadline notifications",
+      "Progress tracking and visualization",
+      "Team chat and commenting system"
+    ],
+    "challenges": "Creating a seamless real-time experience across multiple devices was challenging. I implemented Firebase's real-time database with optimized queries and local caching to ensure fast performance even with poor network conditions.",
     "detailUrl": "/projects/task-management-app",
-    "demoUrl": "#"
+    "demoUrl": "#",
+    "repoUrl": "https://github.com/alexchennz/task-management-app"
   }
 ]

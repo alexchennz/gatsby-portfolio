@@ -88,7 +88,7 @@ export const query = graphql`
         resumeUrl
       }
     }
-    proects: allProjectsJson {
+    projects: allProjectsJson {
       nodes {
         id
         title
