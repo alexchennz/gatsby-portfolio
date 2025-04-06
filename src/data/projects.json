@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "title": "E-Commerce Platform",
+    "description": "A full-stack e-commerce solution with modern UI and secure payment processing.",
+    "image": "/images/projects/project-1.jpg",
+    "techStack": ["React", "Node.js", "MongoDB"],
+    "detailUrl": "/projects/e-commerce-platform",
+    "demoUrl": "#"
+  },
+  {
+    "id": "2",
+    "title": "Task Management App",
+    "description": "Collaborative task management with real-time updates and team features.",
+    "image": "/images/projects/project-2.jpg",
+    "techStack": ["Vue.js", "Firebase", "Vuex"],
+    "detailUrl": "/projects/task-management-app",
+    "demoUrl": "#"
+  }
+]

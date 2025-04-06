@@ -1,0 +1,13 @@
+{
+  "title": "DevPortfolio",
+  "author": "Alex Chen",
+  "role": "Full Stack Developer",
+  "description": "I build exceptional digital experiences with modern web technologies. Passionate about creating innovative solutions that make a difference.",
+  "resumeUrl": "#",
+  "contactUrl": "/contact",
+  "social": {
+    "github": "https://github.com",
+    "linkedin": "https://linkedin.com",
+    "twitter": "https://twitter.com"
+  }
+}

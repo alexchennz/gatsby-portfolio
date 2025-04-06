@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "title": "Getting Started with React Hooks",
+    "date": "April 6, 2025",
+    "category": "React",
+    "description": "An in-depth guide to understanding and implementing React Hooks in your applications.",
+    "image": "/images/blog/post-1.jpg",
+    "url": "/blog/getting-started-with-react-hooks"
+  },
+  {
+    "id": "2",
+    "title": "Building Scalable APIs with GraphQL",
+    "date": "April 3, 2025",
+    "category": "GraphQL",
+    "description": "Explore the benefits of GraphQL and learn how to build efficient, scalable APIs.",
+    "image": "/images/blog/post-2.jpg",
+    "url": "/blog/building-scalable-apis-with-graphql"
+  }
+]
