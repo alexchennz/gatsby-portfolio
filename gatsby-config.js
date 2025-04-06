@@ -10,9 +10,11 @@
 module.exports = {
   siteMetadata: {
     title: `Alex Chen Portfolio`,
-    description: `Full Stack Developer portfolio showcasing projects and skills`,
+    description: `I build exceptional digital experiences with modern web technologies. Passionate about creating innovative solutions that make a difference.`,
     author: `Alex Chen`,
     siteUrl: `https://alexchen.dev`,
+    resumeUrl: `#`,
+    contactUrl: `/contact`,
   },
   plugins: [
     'gatsby-plugin-postcss',

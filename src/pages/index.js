@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Hero from "../components/Hero"
 import Section from "../components/Section"
@@ -7,14 +7,14 @@ import ProjectCard from "../components/ProjectCard"
 import BlogCard from "../components/BlogCard"
 
 // Use hardcoded data for now until GraphQL is working
-const siteData = {
-  title: "DevPortfolio",
-  author: "Alex Chen",
-  role: "Full Stack Developer",
-  description: "I build exceptional digital experiences with modern web technologies. Passionate about creating innovative solutions that make a difference.",
-  resumeUrl: "#",
-  contactUrl: "/contact"
-}
+// const siteData = {
+//   title: "DevPortfolio",
+//   author: "Alex Chen",
+//   role: "Full Stack Developer",
+//   description: "I build exceptional digital experiences with modern web technologies. Passionate about creating innovative solutions that make a difference.",
+//   resumeUrl: "#",
+//   contactUrl: "/contact"
+// }
 
 const projectsData = [
   {
@@ -58,10 +58,11 @@ const blogData = [
   }
 ]
 
-export default function Home() {
+export default function Home({data}) {
+  console.log(data)
   return (
     <Layout>
-      <Hero data={siteData} />
+      <Hero data={data.site.siteMetadata} />
       
       <Section 
         id="featured-projects"
@@ -121,3 +122,18 @@ export default function Home() {
     </Layout>
   )
 }
+
+export const query = graphql`
+  query IndexQuery {
+    site {
+      siteMetadata {
+        author
+        description
+        siteUrl
+        title
+        contactUrl
+        resumeUrl
+      }
+    }
+  }
+`
